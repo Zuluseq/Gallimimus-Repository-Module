@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Sites\Handler;
+namespace Repository\Handler;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -15,6 +15,6 @@ class PingHandler implements RequestHandlerInterface
 {
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        return new JsonResponse(['gallimimus sites: ack' => time()]);
+        return new JsonResponse(['gallimimus Repository: ack' => time()]);
     }
 }
