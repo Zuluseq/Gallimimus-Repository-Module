@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Sites\Handler;
+namespace Repository\Handler;
 
 use Psr\Container\ContainerInterface;
 
