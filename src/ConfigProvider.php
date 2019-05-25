@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GallimimusSiteModule;
+namespace GallimimusRepositoryModule;
 
 /**
- * The configuration provider for the GallimimusSiteModule module
+ * The configuration provider for the GallimimusRepositoryModule module
  *
  * @see https://docs.zendframework.com/zend-component-installer/
  */
@@ -45,7 +45,7 @@ class ConfigProvider
     {
         return [
             'paths' => [
-                'gallimimus-site-module'    => [__DIR__ . '/../templates/'],
+                'gallimimus-repository-module'    => [__DIR__ . '/../templates/'],
             ],
         ];
     }
