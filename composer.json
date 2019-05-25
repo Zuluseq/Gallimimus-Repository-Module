@@ -1,7 +1,7 @@
 {
-    "name": "zuluseq/gallimimus-sites-module",
-    "description": "Gallimimus Sites Module for Gallimimus",
-    "homepage": "https://github.com/Zuluseq/Gallimimus-Sites-Module",
+    "name": "zuluseq/gallimimus-repository-module",
+    "description": "Gallimimus Repository Module for Gallimimus",
+    "homepage": "https://github.com/Zuluseq/Gallimimus-Repository-Module",
     "license": "BSD-3-Clause",
     "keywords": [
         "Gallimimus",
@@ -12,9 +12,9 @@
         "sort-packages": true
     },
     "support": {
-        "issues": "https://github.com/Zuluseq/Gallimimus-Sites-Module/issues",
-        "source": "https://github.com/Zuluseq/Gallimimus-Sites-Module",
-        "rss": "https://github.com/Zuluseq/Gallimimus-Sites-Module/releases.atom"
+        "issues": "https://github.com/Zuluseq/Gallimimus-Repository-Module/issues",
+        "source": "https://github.com/Zuluseq/Gallimimus-Repository-Module",
+        "rss": "https://github.com/Zuluseq/Gallimimus-Repository-Module/releases.atom"
     },
     "require": {
         "php": "^7.1",
@@ -37,12 +37,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Gallimimus\\Sites\\": "src/"
+            "Gallimimus\\Repository\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Gallimimus\\Sites\\": "test/"
+            "Gallimimus\\Repository\\": "test/"
         }
     },
     "config": {
