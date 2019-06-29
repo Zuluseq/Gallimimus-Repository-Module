@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Repository\Handler;
+namespace GallimimusRepositoryModule\Handler;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -13,8 +13,15 @@ use function time;
 
 class PingHandler implements RequestHandlerInterface
 {
+	var $a = "x";
+
+	public function __construct($a)
+	{
+		$this->a = $a;
+	}
+
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        return new JsonResponse(['gallimimus Repository: ack' => time()]);
+        return new JsonResponse(['gallimimus repository: ack' => $this->a." rr ".time()]);
     }
 }

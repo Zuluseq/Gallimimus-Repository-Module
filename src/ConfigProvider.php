@@ -34,6 +34,8 @@ class ConfigProvider
             'invokables' => [
             ],
             'factories'  => [
+				Handler\PingHandler::class => Handler\PingHandlerFactory::class,
+				Handler\Get::class => Handler\GetFactory::class
             ],
         ];
     }
