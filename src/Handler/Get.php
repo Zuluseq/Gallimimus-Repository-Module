@@ -78,7 +78,7 @@ class Get implements RequestHandlerInterface
 		}
 		if(count($wynik)==0) return $this->empty(204);
 
-        return new JsonResponse(['results' => $wynik[0]['template']]);
+        return new JsonResponse($wynik);
     }
 
 	private function czyscString($str) {
