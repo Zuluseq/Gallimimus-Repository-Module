@@ -11,6 +11,7 @@ use Zend\Diactoros\Response\JsonResponse;
 use Zend\Diactoros\Response\EmptyResponse;
 use Zend\Db\Adapter\Adapter;
 use Zend\Db\Sql\Sql;
+use Zend\Db\Adapter\Exception;
 
 use function time;
 
@@ -40,8 +41,10 @@ class Get implements RequestHandlerInterface
 		$slug = $attributes['slug'];
 		if($slug != null) $slug = htmlspecialchars($slug, ENT_HTML5, 'UTF-8');
 
+		
 		// pobieram listę możliwych zapytań do bazy po slugu
 		$qsql = "select * from query where slug = '$slug'";
+		// $this->error($qsql);
 		$qstatement = $adapter->query($qsql);
 		$qresults = $qstatement->execute();
 		$qresult = array();
@@ -107,6 +110,14 @@ class Get implements RequestHandlerInterface
 		// return new EmptyResponse($status,[]);
 		$response = new EmptyResponse();
 		return $response;
+	}
+
+	public function error($mess)
+	{
+		throw new Exception\RuntimeException(
+			$mess,
+			0
+		);		
 	}
 
 }
