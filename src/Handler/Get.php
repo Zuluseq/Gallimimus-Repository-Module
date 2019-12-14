@@ -70,7 +70,6 @@ class Get implements RequestHandlerInterface
 				$sql = str_replace('{'.$key.'}',$value, $sql);
 			}
 		}
-
 		// zwracam wynik
 		$statement = $adapter->query($sql);
 		$results = $statement->execute();
